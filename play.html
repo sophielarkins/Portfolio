@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Sophie Larkins | Play</title>
+	<meta name="description" content="Design experiments and illustrations"/>
+	<link rel="icon" href="media/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" href="media/favicon/favicon-192x192.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+    <link href="style-new.css" rel="stylesheet">	
+	<style>
+	
+	
+	/* NOTE TO SELF: LEAVE THIS ALONE*/
+	@media (min-width: 550px){
+	section.projects {
+    		padding: 0 2rem!important;
+		}
+	}
+
+	@media (max-width: 550px){
+	section.projects {
+    		margin-bottom: -0.75em!important;
+		}
+	}
+
+	@media only screen and (min-width: 1167px){
+		section.projects {
+   		padding: 0!important;
+		}
+	}
+	
+	section.projects {
+		grid-template-areas: none;  /* switches off other css applied to section selector */
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+		grid-gap: 1.5em;
+		grid-row-gap: 1.5em;
+	}
+	/* Fixes over-wide images on screens below 416px */
+	@media (max-width: 415px) { 
+	section.projects {
+    		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    		}
+	}
+	.projects figure { display: grid; grid-area: auto; background: #f9f0ef; margin:0; }
+	
+	/* grid applied to anchor */
+	.projects figure a {
+		display:grid;
+		grid-template-rows: 45% auto;
+		grid-template-areas:
+		"im"
+		"im"
+    }
+    
+    .projects figure * { grid-column: 1; }
+	.projects figure img { grid-area: im; }
+	
+	.projects figure img { filter: opacity(1); }
+	.projects figure:hover img { filter: opacity(0.2); transition: 0.3s;}
+	
+	.projects figure figcaption {
+		grid-row: 2;
+		padding-left: 0rem;
+		z-index: 100;
+	}
+	
+	
+	
+	<!-- rollover heading styling -->
+	
+	.projects figure h3 { margin-bottom:0; color:#000; font-size:2em; }
+	
+	.projects figure a { text-decoration: none; }
+	
+	figure.roll figcaption h2, figure.roll figcaption p {
+    	opacity: 0;
+		}
+		
+	figure.roll figcaption p { margin-top: -1.7em; font-size: 1.2em; }
+		
+	.container figure figcaption h2 {
+    	line-height: 1.15em;
+    	font-size: 2em;
+    	margin-top: -0.42em;
+	}
+
+	h2.hover {
+    	text-align: center;
+		}
+	
+	figure.roll:hover h2, figure.roll:hover p {
+    	opacity: 1;
+    	background: transparent;
+    	grid-area: all !important;
+    	justify-self: center;
+    	align-self: center;
+    	color: #312f41;
+    	z-index: 1;
+    	padding: 0 1em 1em 1em;
+		}
+		
+		
+		
+		<!-- rollover figure change -->
+
+  figure.change {
+        width:2em;
+        position: relative;
+        display: inline-block;
+    }
+    .change .img-top {
+        display: none;
+        z-index: 99;
+    }
+    .change:hover .img-top {
+        display: inline;
+        opacity: 1
+    }
+    
+    .change:hover .img-bottom { opacity: 0}
+		
+	<!-- Acknowledgement: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -->
+		
+	</style>
+	
+	<!-- Setting viewport so mobiles over 550px wide don't display desktop site. Acknowledgement: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<div class="container">
+
+<nav>
+<a href="index.html"><img class="logo" src="media/home/logo-updated.svg" alt="Sophie Larkins logo" /><img class="logo-small" src="media/home/logo-icon.svg" alt="Sophie Larkins logo (small)" /></a>
+<ul class="align">
+	<li><a href="index.html">Work</a></li>
+		<li><a href="play.html"><span>Play</span></a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+
+<center><h1 style= "padding-top: 0.2em;">Creative Play</h1></br></center>
+<center><p class="index darkgrey" style= "padding-bottom: 2.5em;">Take a look at some of my passion projects, experiments, and creative curiosities.</p></center>
+
+<section class="projects" style="margin-bottom: -1.5em;">
+
+	<figure class="roll change"><a href="myidentity.html">
+		<img class="img-top" alt="My hummingbird photo that inspired the logo" src="media/play/thumbnail-photo.jpg">
+		<img class="img-bottom" alt="final flying hummingbird logo with four sparkles around it" src="media/play/logo-sparkle-gif-thumbnail-taller.gif">
+		<figcaption>
+			<center><h2>My Identity</h2></center>
+			<center><p>Why the hummingbird logo?</p></center>
+		</figcaption></a>
+	</figure>
+
+
+
+		<figure class="roll change"><a href="evolution.html">
+	    <img class="img-top" alt="closeup of leopard eyes, nose and whisker details with red panda eye collaged into left side of face" src="media/play/evolution-alt.jpg">
+		<img class="img-bottom" alt="Evolution final piece. Coloured pencil drawing of leopard face with red panda, tropical Amakihi bird and layered 3D pixels collaged into face" src="media/play/evolution.jpg">
+		<figcaption>
+	<center><h2>"Evolution"</h2></center>
+	<center><p>Art piece inspired by shared DNA</p></center>
+		</figcaption></a>
+	</figure>
+	
+
+
+</section> <!-- end .projects section -->
+
+<section class="threeone">
+	<figure class="col1 roll change">
+	<img alt="A pool, garden and luxury home surrounded by Bougainvillea shrubs, palm trees and mountains, set in Palm Desert, California." src="media/play/palmdeserthome.jpg">
+	</figure>
+	
+	
+    <figure class="col2">
+	<img alt="A Wild West desert landscape at sunset with Saguaro cacti, a swooping Eagle, orange rock formations, a purple sky and a yellow sun" src="media/play/wildwest.jpg">
+	</figure>
+	
+	<figure class="col3">
+	<img alt="A palm tree-lined desert highway at golden hour, with green traffic lights hanging overhead and a mountain in the background " src="media/play/deserthighway.jpg">
+	</figure>
+</section>
+
+
+<section class="threeone" style="margin-top: -1.7em;">
+	<figure class="col1">
+	<img alt="A rocky, cliff-lined Northern California beach at sunset in pastel blue, rusty red and cream colours" src="media/play/norcal-beach.jpg">
+	</figure>
+	
+    <figure class="col2">
+	<img alt="San Francisco's Golden Gate Bridge and surrounding hills in pastel blue, rusty red and cream colours" src="media/play/norcal-goldengatebridge.jpg">
+	</figure>
+	
+	<figure class="col3">
+	<img alt="View of Pescadero State Beach at sunset from a clifftop with shrubs in pastel blue, rusty red and cream colours" src="media/play/norcal-rocky.jpg">
+	</figure>
+</section>
+
+
+<section class="twotwo" style="margin-top: -1.7em;">
+
+    <figure class="col1">
+	<img alt="Two Waxwing birds perched on branches eating berries with a saturated pink and orange countryside background" src="media/play/winterwaxwings.jpg">
+	</figure>
+	<figure class="col2">
+	<img alt="Scene of a tall snow-capped mountain surrounded by dark green pine trees with a curving river leading through a light green grassland" src="media/play/mountains-green.jpg">
+	</figure>
+
+</section>
+
+<section class="threeone" style="margin-top: -2.2em;">
+	<figure class="col1">
+	<img alt="View of the incoming waves hitting rocky shore with green shrubs and palm trees on Charley Young Beach in Maui, Hawaii in pastel teal green, cream, light brown and leaf green" src="media/play/hawaii-2.jpg">
+	</figure>
+	
+    <figure class="col2">
+	<img alt="Red pine-tree and grey-blue cliff-lined valley with the setting red sun behind and a curving river running through the centre. " src="media/play/pineforest.jpg">
+	</figure>
+	
+	<figure class="col3">
+	<img alt="Tranquil Hawaiian beach with palm trees blowing in the wind, large rocks lining the beach and the teal-green sun setting in the background, in pastel teal green, cream, light brown and leaf green" src="media/play/hawaii-1.jpg">
+	</figure>
+</section>
+
+
+<section class="quarterhalfquarter" style="margin-top: -1em;">
+	<figure class="col1">
+	<img alt="view from beneath tall city skyscrapers reaching into the sky in black and white and harsh grain and paint textures" src="media/play/buildings.jpg">
+	</figure>
+	
+    <figure class="col2">
+	<img alt="Bulldozer shoveling detritus into a pile which is shaped like a city skyline in black and white and harsh grain and paint textures" src="media/play/cityrefuse.jpg">
+
+	</figure>
+	
+	<figure class="col3">
+	<img alt="Mountains of detritus from the city forming jagged mountain peaks with eagles soaring around them in black and white and harsh grain and paint textures" src="media/play/eaglesovermountains.jpg">
+	</figure>
+</section>
+
+<section class="threeone" style="margin-top: -0.7em;">
+	<figure class="col1">
+	<img alt="Palm Springs landscape framed by light pink Fan Palm leaves, with hazy pastel pink mountains, a pastel blue lake and setting sun in background" src="media/play/socal-3.jpg">
+	</figure>
+	
+    <figure class="col2">
+	<img alt="Palm Springs landscape with tall light pink Date Palms, hazy pastel pink mountains, and the sun's rays shimmering off a pastel blue lake" src="media/play/socal-2.jpg">
+	</figure>
+	
+	<figure class="col3">
+	<img alt="Palm Springs canyon landscape with an oasis surrounded by Fan Palm trees and the sun setting behind canyon walls in background " src="media/play/socal-1.jpg">
+	</figure>
+</section>
+
+
+
+
+<section class="twotwo" style="margin-top: -1.7em;">
+
+    <figure class="col1">
+	<img alt="Arrow or computer mouse shape comprised of HTML symbols, such as brackets and quotation marks, in pastel blue, orange, red, pink and yellow on a desaturated dark purple background" src="media/play/html.png">
+
+	</figure>
+	<figure class="col2">
+	<img alt="Full decorative HTML symbol pattern, with semicolons, colons, brackets and quotation marks in pastel blue, orange, red, pink and yellow on a desaturated dark purple background" src="media/play/html-pattern.png">
+	</figure>
+
+</section>
+
+
+
+
+
+<!--- SOCIAL MEDIA ICONS -->
+ <div class="social" style="padding-top:60px">
+   <ul class="social">
+   <li class="social"> 
+		<a target="_blank" href="https://www.instagram.com/sophielarkins/?hl=en" >  <img class="social" alt="Instagram" src="media/contact/iconmonstr-instagram-11.svg"></a>
+		</li>
+   <li class="social"> 
+		<a target="_blank" href="https://www.linkedin.com/in/sophie-larkins-6341b61a6/" > <img class="social" alt="LinkedIn" src="media/contact/iconmonstr-linkedin-1.svg"></a>
+		</li>
+   <li class="social">
+		<a target="_blank" href="https://dribbble.com/SophieLarkins" >  <img class="social" alt="Dribbble" src="media/contact/iconmonstr-dribbble-1.svg"></a>
+   		</li>
+   <li class="social" style="margin-right: -1.2rem;"> 
+		<a target="_blank" href="https://www.behance.net/sophielarkins" > <img class="social" alt="Behance" src="media/contact/iconmonstr-behance-1.svg"></a>
+	</li>
+	</ul>
+ </div>
+
+<footer> 
+<center><p class="lightgrey">&#169; Sophie Larkins 2023</p></center>
+</footer>
+
+</div> <!-- end of container -->
+
+
+</body>
+</html>

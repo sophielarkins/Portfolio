@@ -1,0 +1,1340 @@
+/*  all the em & rem measurements start from this setting  
+--------------------------------------------------------------------------------------- */
+html { font-size: 16px; }
+
+
+/*  global styles to reset default values  
+--------------------------------------------------------------------------------------- */
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
+body, div, ul, li, img, video, section, figure, figcaption, main, footer, 
+h1, h2, h3, p, a { margin: 0; padding: 0; border: 0; }
+
+body { background: #f9f0ef; }
+
+
+/*  this sets page width: 60em = 960px  75em = 1200px  72em = 1152px
+--------------------------------------------------------------------------------------- */
+.container { max-width: 60em; max-width: 72em; }
+.container { margin :0 auto; background: #f9f0ef; }
+
+
+
+/*  text colour styles
+--------------------------------------------------------------------------------------- */
+body { color: #6c6a77; }
+h1, h2 { color: #312f41; }
+h3 { color: #53505c; }
+h4 { color: #6c6a77; }
+p, ul, li { color: #6c6a77; }
+figcaption { color: #858393; }
+
+
+.black { color: #312f41; }
+.darkgrey { color: #53505c; }
+.lightgrey { color:#a4a3ad; }
+
+
+/* example web font styles using IBM Plex Sans
+--------------------------------------------------------------------------------------- */
+
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url(fonts/Poppins-Light.ttf); font-display:auto;
+}
+
+@font-face {
+    font-family: Poppins-LightItalic;
+    src: url(fonts/Poppins-LightItalic.ttf); font-display:auto;
+}
+
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(fonts/Poppins-Regular.ttf); font-display:auto;
+}
+
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(fonts/Poppins-Medium.ttf); font-display:auto;
+}
+
+
+body		{ font-family: Poppins-Light, Helvetica, Arial, sans-serif; }
+h1 { font-family: Poppins-Medium, Helvetica, Arial, sans-serif; }
+h2 { font-family: Poppins-Medium, Helvetica, Arial, sans-serif; }
+h3 { font-family: Poppins-Medium, Helvetica, Arial, sans-serif; }
+h4 { font-family: Poppins-Regular, Helvetica, Arial, sans-serif; }
+a  { font-family: Poppins-Medium, Helvetica, Arial, sans-serif; }
+p, ul, li	{ font-family: Poppins-Light, Helvetica, Arial, sans-serif; }
+figcaption	{ font-family: Poppins-Light, Helvetica, Arial, sans-serif; }
+
+
+
+/*  top navigation section  
+--------------------------------------------------------------------------------------- */
+nav 	{ 
+	padding: 2rem 1rem 1rem 1rem;
+	margin-bottom: 1rem;
+	/* border-bottom: 1.5px #fbdcc7 solid; - underline under nav */
+	min-height: 2rem;  
+	display: grid; 
+	grid-template-columns: 1fr auto;
+ }
+ 
+nav h1	{ font-size: 1.5em; margin-bottom:.5em; }
+nav a	{ white-space: nowrap; }
+
+nav ul		{ list-style-type:none;}
+nav ul li	{ display:inline; margin-right:2rem; font-size:1.2em; font-family: Poppins-Medium, Helvetica, Arial, sans-serif }
+
+nav li span { color:#312f41 }
+
+
+/*  logo in nav
+--------------------------------------------------------------------------------------- */
+.logo {height:85px;}
+@media only screen and (min-width:700px){ 
+		.logo {display:inline-block;
+		}
+		.logo-small {display:none;
+		}
+}
+@media only screen and (max-width:699px){
+		.logo {display:none;
+		}
+		.logo-small {display:inline-block;
+		height:85px;
+		}
+}
+
+/*  hero image
+--------------------------------------------------------------------------------------- */
+.container > figure { margin:0 .5rem 2rem .5rem; }
+
+
+/*  iframe code for Vimeo embeds - https://www.benmarshall.me/responsive-iframes/
+--------------------------------------------------------------------------------------- */
+
+.iframe-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+  background:#000;
+}
+
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+
+/*  main page title after top navigation
+--------------------------------------------------------------------------------------- */
+.container > h2 	{ line-height: 1.15em; font-size: 1.8em; margin: 0 .5em 1em; }
+.container figure h2	{ line-height: 1.15em; font-size: 1.8em; }
+
+
+
+/*  main content after hero image / main title
+--------------------------------------------------------------------------------------- */
+section { padding: 0 .5rem 2rem; }
+
+section p { padding-bottom: 0rem}
+
+section h4 { font-size: 1.05em; line-height: 1.5em; padding-left: 0rem}
+
+section h3 { font-size: 1.3em; line-height: 1.5em; padding-left: 0rem}
+
+section h2 { font-size: 1.4em; line-height: 1.5em; padding-left: 0rem}
+
+section h1 { font-size: 2.1em; line-height: 1.5em; padding-left: 0rem}
+
+section figure { margin-bottom: 1rem; }
+
+section figcaption { font-size:.8em; }
+
+section div { margin-top: -0.45rem; margin-top: -0.375rem; margin-bottom: 1.8rem; }  /* to adjust type against images */
+
+section ul { padding-left: 2rem} /* NEW STYLE FOR LISTS*/
+
+section li { padding-left: 0rem} /* NEW STYLE FOR LISTS*/
+
+
+
+/*  media defaults to force image & video width to parent element width
+--------------------------------------------------------------------------------------- */
+img	{ max-width: 100%; height: auto; } /* max-width stops img element going bigger than its actual size */
+
+video	{ max-width: 100%; width: 100%; }
+
+
+
+/* typography styling
+--------------------------------------------------------------------------------------- */
+h2.index { font-size: 2.7em } /* "Hey!" header 2 home page synopsis */
+p.index {margin-top: -0.9em; font-size: 1.2em} /* Paragraph home page synopsis */
+ul.align {margin-top: 1.6em }
+a.about { font-family: Poppins-Regular } /* Subtle link styling for About Me page */
+h3.lower { padding-top: 0.6em }
+span.bold { font-family: Poppins-Regular } /* "Focus:" paragraph styling on project intro sections */
+section div h4 { margin-bottom:0; }
+section div.lcol h4 { padding: 0; margin: 0; border: 0; }
+section h3, section h4, section div h3, section div h4 { margin: 10px 0 10px 0; }
+p.quote, span.quote {font-family: Poppins-LightItalic } /* Quote styling */
+section.padtop { padding-top: 1.5em; }
+section.alttwo li { margin-left: -0.9em }
+
+
+section.alttwo figure { margin-right: 1.5em; } /* Spacing between right hand paragraphs and image */
+section.original figure { margin-right: 1.5em; }
+section.vertleft figure { margin-right: 1.5em; }
+section.altseven figure.col2, section.altseven figure.col3 { margin-right: 1.5em; }
+section.nine figure.col2 { margin-right: 1.5em; }
+section.four figure { margin-right: 1.5em; }
+
+
+
+
+
+/* image styling 
+--------------------------------------------------------------------------------------- */
+img.circle { border-radius: 50%; }  /* Circular image styling */
+img.small {
+    border-radius: 50%;
+    max-width: 80%;
+    margin: 0 10% 1em 10%;
+}
+ 
+figcaption.small {
+    font-family: Poppins-Light, Helvetica, Arial, sans-serif;
+    margin: 0 10% 0 10%;
+}
+
+.transition img:hover {opacity:0.5; transition: 0.3s; }
+
+
+/*  default paragraph styling
+--------------------------------------------------------------------------------------- */
+p { margin: 0 0 1rem 0; line-height: 1.375em; max-width: 30rem; font-size: 1em; } /* max-width sets line length */
+
+/* section:nth-of-type(1) p:nth-of-type(1) { font-size:1.125em; }  sets section first para font size */
+
+ul { margin: 0 0 1rem 0; line-height: 1.375em; max-width: 28rem; font-size: 1em; } /* LIST */
+
+li { margin: 0 0 1rem 0; line-height: 1.375em; max-width: 28rem; font-size: 1em; } /* LIST */
+
+
+
+
+/*  project overview bottom nav
+--------------------------------------------------------------------------------------- */
+
+nav.overview 	{ 
+	padding: 3rem 1rem 1rem 1rem;
+	margin-bottom: 1rem;
+	min-height: 2rem;  
+	display: grid; 
+	grid-template-columns: 1fr auto;
+ }
+ 
+nav a.overview	{ white-space: nowrap; }
+
+nav ul.overview		{ list-style-type:none;}
+nav ul.overview, nav li.overview	{ margin-right: 1.2rem; max-width: 100em; display:inline; font-size: 1.17em; line-height: 1.7em; font-family: Poppins-Medium, Helvetica, Arial, sans-serif }
+
+nav.overview li span { color:#312f41 }
+
+
+
+/*  deep dive project overview top nav
+--------------------------------------------------------------------------------------- */
+
+nav.topoverview 	{ 
+	padding: 0rem 1rem 1rem 1rem;
+	margin-bottom: 1rem;
+	min-height: 2rem;  
+	display: grid; 
+	grid-template-columns: 1fr auto;
+ }
+ 
+nav a.topoverview	{ white-space: nowrap; }
+
+nav ul.topoverview		{ list-style-type:none;}
+nav ul.topoverview, nav li.topoverview	{ margin-right: 1rem; margin-left: 1rem; max-width: 100em; display:inline; font-size: 1.05em; font-family: Poppins-Medium, Helvetica, Arial, sans-serif }
+
+nav.topoverview li span { color:#312f41 }
+
+
+
+
+
+
+/*  footer section
+--------------------------------------------------------------------------------------- */
+footer { font-size: 1em; padding: 1rem .25rem; }
+
+footer ul { list-style-type: none; }
+footer li { list-style-type: none; margin: 0 0 .5rem 0;  }
+
+footer h3 { margin: 0 0 1em 0; font-size: 1em; }
+
+
+
+/*  link styling
+--------------------------------------------------------------------------------------- */
+a		{ color: #f39586; text-decoration: none; }
+a:visited	{ color: #f39586; }
+a:hover		{ color: #312f41; transition: 0.2s;}
+a:active	{ color: #312f41; }
+
+
+
+
+
+
+
+/* 
+IMPORTANT: media query - switches on grid layout if page width is wider than 550px
+--------------------------------------------------------------------------------------- */
+@media (min-width: 550px) { 
+
+
+/*  IMPORTANT: min-width:60em rule will stop the container from resizing  
+--------------------------------------------------------------------------------------- */
+	.container { min-width: 60rem; min-width: 0; min-height: 100vh; }
+
+
+/*  top navigation grid
+--------------------------------------------------------------------------------------- */	
+	nav ul { margin-top: .48rem; margin-top: .4rem; }
+
+	
+/*  main page title after top navigation
+--------------------------------------------------------------------------------------- */
+	.container > h2 { line-height: 1.15em; font-size: 1.8em; margin: 0 auto 1em; text-align: center; }
+
+
+
+/*  hero image
+--------------------------------------------------------------------------------------- */
+	.container > figure { margin: 0 0 2rem 0; }
+
+	
+
+/*  1 figure (2/3), 1 paragraph (1/3) section 
+--------------------------------------------------------------------------------------- */
+	section.original  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hd hd hd hd hd hd hd hd hd hd hd hd"
+		"fg fg fg fg fg fg fg fg dv dv dv dv"
+	}
+	
+	section { padding: 0 2rem; } /* adds left padding to ALL SECTIONS so text doesn't meet edge of window */
+	section.original {margin-top: 2.5em;}
+	
+	
+	
+	/*  1 Paragraph (1/2) 1 Figure (1/2)
+--------------------------------------------------------------------------------------- */
+	section.alt  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hg hg hg hg hg hg hg hg hg hg hg hg"
+		"tt tt tt tt tt tt fl fl fl fl fl fl"
+	}
+	
+section.two p { max-width: 70em; padding-top: 1rem; }
+section.two {margin-top: 2.5em;}
+	
+	
+	
+	/*  project title and intro
+--------------------------------------------------------------------------------------- */
+	section.intro  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hr hr hr hr hr xx qu qu qu qu qu qu"
+		"tw tw tw tw tw xx qu qu qu qu qu qu"
+	}
+	
+section.intro p { padding-top: 0.5rem; margin-bottom: 0.5rem; }
+section.intro h3 { max-width: 30rem;}
+section.intro {margin-top: 3.5em; margin-bottom: 3.5em;}
+	
+	
+	
+	/*  1 Full width figure, 2 1/2 width paragraph
+--------------------------------------------------------------------------------------- */
+	section.one  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hn hn hn hn hn hn hn hn hn hn hn hn"
+		"fk fk fk fk fk fk fk fk fk fk fk fk"
+		"tu tu tu tu tu tu tf tf tf tf tf tf"
+	}
+	
+section.one {margin-top: 2.5em;}
+
+
+
+/* 1 Full width figure,(2/3) figure (1/3) paragraph
+--------------------------------------------------------------------------------------- */
+	section.alttwo  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hr hr hr hr hr hr hr hr hr hr hr hr"
+		"fn fn fn fn fn fn fn fn ts ts ts ts"
+		"fm fm fm fm fm fm fm fm ts ts ts ts"
+
+
+	}
+	
+section.alttwo p { max-width: 32rem; }
+section.alttwo {margin-top: 2.5em;}
+
+
+
+/*  2 rows of 2 Figures, 2 paragraphs
+--------------------------------------------------------------------------------------- */
+	section.twotwo  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hb hb hb hb hb hb hb hb hb hb hb hb"
+		"fo fo fo fo fo fo fp fp fp fp fp fp"
+		"fq fq fq fq fq fq fs fs fs fs fs fs"
+		"ft ft ft ft ft ft ft ft ft ft ft ft"
+		"ta ta ta ta ta ta tc tc tc tc tc tc"
+	}
+	
+section.twotwo p { max-width: 32rem; }
+section.twotwo {margin-top: 2.5em;}
+
+
+
+/*  3 Figure row, 1 full width figure
+--------------------------------------------------------------------------------------- */
+	section.threeone  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hc hc hc hc hc hc hc hc hc hc hc hc"
+		"fu fu fu fu fv fv fv fv fw fw fw fw"
+		"fx fx fx fx fx fx fx fx fx fx fx fx"
+		"td td td td td td te te te te te te"
+	}
+	
+section.threeone p { max-width: 32rem; }
+section.threeone {margin-top: 2.5em;}
+
+
+
+/*  3x figures at 1/3 height and 1 full height figure, 1 1/2 width figure
+--------------------------------------------------------------------------------------- */
+	section.five  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hf hf hf hf hf hf hf hf hf hf hf hf"
+		"fy fy fy fy fy fy ib ib ib ib ib ib"
+		"fy fy fy fy fy fy ib ib ib ib ib ib"
+		"fx fx fx fx fx fx ib ib ib ib ib ib"
+		"tg tg tg tg tg tg th th th th th th"
+	}
+	
+section.five p { max-width: 70em; }
+section.five {margin-top: 2.5em;}
+
+
+
+/*  2 rows of 1/2 width figure, 1/2 text
+--------------------------------------------------------------------------------------- */
+	section.vertleft  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hh hh hh hh hh hh hh hh hh hh hh hh"
+		"ic ic ic ic ic ic ti ti ti ti ti ti"
+		"id id id id id id ti ti ti ti ti ti"
+	}
+	
+section.vertleft p { max-width: 32rem; }
+section.vertleft {margin-top: 1.5em;}
+
+
+
+/*  6 rows of full width images, r/l paragraphs below
+--------------------------------------------------------------------------------------- */
+	section.six  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hj hj hj hj hj hj hj hj hj hj hj hj"
+		"ie ie ie ie ie ie if if if if if if"
+		"ig ig ig ig ig ig ig ig ig ig ig ig"
+		"ih ih ih ih ih ih ih ih ih ih ih ih"
+		"ii ii ii ii ii ii ii ii ii ii ii ii"
+		"ij ij ij ij ij ij ij ij ij ij ij ij"
+		"tj tj tj tj tj tj tk tk tk tk tk tk"
+	}
+	
+section.six {margin-top: 2.5em;}
+
+
+
+/*  2x 1/4 height images and 1x 1/2 height image, 1 full width image
+--------------------------------------------------------------------------------------- */
+	section.altfour  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hl hl hl hl hl hl hl hl hl hl hl hl"
+		"iq iq iq iq iq iq ir ir ir ir ir ir"
+		"is is is is is is ir ir ir ir ir ir"
+		"it it it it it it it it it it it it"
+		"da da da da da da db db db db db db"
+	}
+	
+section.altfour {margin-top: 2.5em;}
+
+
+
+/*  full width image, 1x 1/3 and 1x 2/3 image, fw, paragraph, fw, fw
+--------------------------------------------------------------------------------------- */
+	section.altfive  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hm hm hm hm hm hm hm hm hm hm hm hm"
+		"iu iu iu iu iu iu iu iu iu iu iu iu"
+		"iv iv iv iv iv iv iv iv iv iv iv iv"
+		"ix ix ix ix ix ix ix ix ix ix ix ix"
+		"dc dc dc dc dc dc dd dd dd dd dd dd"
+		"iy iy iy iy iy iy iy iy iy iy iy iy"
+		"iz iz iz iz iz iz iz iz iz iz iz iz"
+	}
+	
+section.altfive {margin-top: 2.5em;}
+
+
+
+/*  1/2 para, fw, 1/2 para, fw, fw, fw, fw,fw, 1/2 para, fw fw
+--------------------------------------------------------------------------------------- */
+	section.seven  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"ho ho ho ho ho ho ho ho ho ho ho ho"
+		"de de de de de de df df df df df df"
+		"pa pa pa pa pa pa pa pa pa pa pa pa"
+		"pb pb pb pb pb pb pb pb pb pb pb pb"
+		"pd pd pd pd pd pd pd pd pd pd pd pd"
+		"pe pe pe pe pe pe pe pe pe pe pe pe"
+		"pf pf pf pf pf pf pf pf pf pf pf pf"
+		"pg pg pg pg pg pg pg pg pg pg pg pg"
+		"di di di di di di dj dj dj dj dj dj"
+		"ph ph ph ph ph ph ph ph ph ph ph ph"
+		"pi pi pi pi pi pi pi pi pi pi pi pi"
+	}
+	
+section.seven {margin-top: 2.5em;}
+
+
+
+/*  About Me - 1/3 image 2/3 header, 2/3 paragraph
+--------------------------------------------------------------------------------------- */
+	section.about  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"pj pj pj pj pj hp hp hp hp hp hp hp dl" 
+		"pj pj pj pj pj dk dk dk dk dk dk dk dl"
+	}
+	
+section.about p { max-width: 70em; padding-top: 0rem; }
+
+
+
+/*  1/2 para, fw, fw, 2/3 and 1/3...
+--------------------------------------------------------------------------------------- */
+	section.eight  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hp hp hp hp hp hp hp hp hp hp hp hp hp" 
+		"dn dn dn dn dn dn dn do do do do do do"
+		"pj pj pj pj pj pj pj pj pj pj pj pj pj"
+		"pk pk pk pk pk pk pk pk pk pk pk pk pk"
+		"pl pl pl pl pl pl pl pl pm pm pm pm pm"
+		"dp dp dp dp dp dp dq dq dq dq dq dq dq"
+		"pn pn pn pn pn pn pn pn po po po po po"
+		"pp pp pp pp pp pp pp pp pp pp pp pp pp"
+		"pq pq pq pq pq pq pq pq pq pq pq pq pq"
+	}
+	
+section.eight {margin-top: 2.5em;}
+
+
+
+/*  1x 1/3 figure, 1x 1/6 figure, 1/2 paragraph, 1x 1/6 figure
+--------------------------------------------------------------------------------------- */
+	section.nine  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"ht ht ht ht ht ht ht ht ht ht ht ht"
+		"pz pz pz pz pz wa wa wa du du du du"
+		"pz pz pz pz pz wa wa wa du du du du"
+	
+	}
+	
+section.nine p { max-width: 70em; }
+section.nine {margin-top: 2.5em;}
+
+
+
+/*  for audio section in Creative Futures
+--------------------------------------------------------------------------------------- */
+	section.audio  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hv hv hv hv hv hv hv hv hv hv hv hv"
+		"al al al al al al am am am am am am"
+		"af af af af ag ag ag ag ah ah ah ah"
+		"ai ai ai ai aj aj aj aj ak ak ak ak"
+		"an an an an an an ao ao ao ao ao ao"
+	}
+	
+section.audio p { max-width: 70em;}
+
+
+
+/*  'the challenge' 'the approach' summary sections
+--------------------------------------------------------------------------------------- */
+	section.summary  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"sa sa sa sa sa sa sb sb sb sb sb sb"
+	}
+	
+section.summary { margin-top: 2em; margin-bottom: 1em; }
+
+
+
+/*  critical reflection - 2/3 paragraph column
+--------------------------------------------------------------------------------------- */
+	section.reflection  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"ra ra ra ra ra ra ra ra rb rb rb rb"
+		"wd wd wd wd wd wd wd we we we we we"
+		"rc rc rc rc rc rc rc rc rd rd rd rd"
+		"wf wf wf wf wf wf wf wg wg wg wg wg"
+		"re re re re re re re re rf rf rf rf"
+
+	}
+	
+section.reflection { margin-top: 2em; margin-bottom: 1em; }
+section.reflection div, section.reflection figure { margin-top: 1em; margin-bottom: 1em; }
+section.reflection p { max-width: 35rem; }
+section.reflection img {max-width: 35rem;}
+
+
+/*  critical reflection - 2 rows of 3 images each
+--------------------------------------------------------------------------------------- */
+	section.altsix  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"wh wh wh wh wi wi wi wi wj wj wj wj"
+		"wk wk wk wk wl wl wl wl wm wm wm wm"
+
+	}
+
+section.altsix {margin-top: 2.5em;}
+
+/*  critical reflection - 2 rows of 3 images each
+--------------------------------------------------------------------------------------- */
+	section.four  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hw hw hw hw hw hw hw hw hw hw hw hw"
+		"wn wn wn wn wn wn wo wo wo wo wo wo"
+		"wp wp wp wp wp wp wq wq wq wq wq wq"
+		"da da da da da da db db db db db db"
+
+	}
+
+section.four {margin-top: 2.5em;}
+
+
+/*  OM challenge section
+--------------------------------------------------------------------------------------- */
+	section.omchallenge  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"wr wr wr wr wr wr wr wr wr wr wr wr wr"
+        "ws ws ws ws ws ws ws ws ws ws ws ws ws"
+        "wt wt wt wt wt wt wt wt wu wu wu wu wu"
+        "wv wv wv wv wv wv wv wv wv wv wv wv wv"
+        "wx wx wx wx wx wx wx wx wx wx wx wx wx"
+	}
+
+section.omchallenge {margin-top: 2.5em;}
+
+
+/*  Devices Test section
+--------------------------------------------------------------------------------------- */
+	section.devicetest  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"wy wy wy wy wz wz wz wz wa wa wa wa"
+		"da da da da da da db db db db db db"
+	}
+
+section.devicetest {margin-top: 2.5em;}
+
+
+/*  Quote section
+--------------------------------------------------------------------------------------- */
+	
+section.quotegrid  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"wy wy wy wy wy wy wz wz wz wz wz wz"
+	}
+
+section.quotegrid { margin-top: 1em; margin-bottom: .5em; }
+
+
+/*  Bounce Back section
+--------------------------------------------------------------------------------------- */
+	
+section.bounceback  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hd hd hd hd hd hd hd hd hd hd hd hd"
+		"ka ka ka ka ka ka kb kb kb kb kb kb"
+		"kc kc kc kc kc kc kc kc kc kc kc kc"
+		"dv dv dv dv dv dv dw dw dw dw dw dw"
+	}
+
+section.bounceback { margin-top: 1em; margin-bottom: .5em; }
+section.bounceback p { margin-top:1.5em; }
+
+
+/*  Bounce Back section
+--------------------------------------------------------------------------------------- */
+	
+section.twotwotwo  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hd hd hd hd hd hd hd hd hd hd hd hd"
+		"ia ia ia ia ib ib ib ib ic ic ic ic"
+		"id id id id ie ie ie ie if if if if"
+		"dv dv dv dv dv dv dw dw dw dw dw dw"
+	}
+
+section.twotwotwo { margin-top: 1em; margin-bottom: .5em; }
+section.twotwotwo p { margin-top:1.5em; }
+
+
+/*  Symbiosis Artivive Test Section
+--------------------------------------------------------------------------------------- */
+	
+section.onetwothirds  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"hd hd hd hd hd hd hd hd hd hd hd hd"
+		"ig ig ig ih ih ih dw dw dw dw dw dw"
+	}
+
+section.onetwothirds { margin-top: 1.5em; margin-right: 3em; margin-bottom: .5em; }
+section.onetwothirds p { margin-top: 1.5em; max-width: 32rem; }
+section.onetwothirds div { margin-left: 1.5em; }
+
+
+
+/*  Full width text
+--------------------------------------------------------------------------------------- */
+	
+section.fullwidth  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"dx dx dx dx dx dx dx dx dx dx dx dx"
+	}
+
+section.fullwidth { margin-top: 1.5em; }
+section.fullwidth p { margin-top: 1.5em; max-width: 110rem; }
+
+
+
+
+/*  1/4 Image, 1/2 Image, 1/4 Image
+--------------------------------------------------------------------------------------- */
+	
+section.quarterhalfquarter  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"dy dy dy dz dz dz dz dz dz ea ea ea"
+	}
+
+section.quarterhalfquarter { margin-top: 1.5em; }
+
+
+
+/*  1/2 Image, 1/4 Image, 1/4 Image
+--------------------------------------------------------------------------------------- */
+	
+section.halfquarterquarter  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"eb eb eb eb eb eb ec ec ec ed ed ed"
+	}
+
+section.halfquarterquarter  { margin-top: 1.5em; }
+
+
+
+/*  3/4 Image, 1/4 Text
+--------------------------------------------------------------------------------------- */
+	
+section.threequartertext  { 
+		display: grid; 
+		grid-template-columns: repeat(12, [col] 1fr);
+		grid-template-rows: auto;
+		grid-column-gap: 1.5rem;  
+		grid-row-gap: 0.625rem;    /*  .625% of 16 = 10, 0.625em = 10px ...  */
+		grid-template-areas:
+		"ee ee ee ee ee ee ee ee ef ef ef ef"
+	}
+
+section.threequartertext { margin-top: 1.5em; }
+
+
+
+
+
+
+/*  section.threequartertext - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.threequartertext figure.col1	{ grid-area: ee; }
+	section.threequartertext div.rcol	{ grid-area: ef; }
+
+
+
+/*  section.halfquarterquarter - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.halfquarterquarter figure.col1	{ grid-area: eb; }
+	section.halfquarterquarter figure.col2	{ grid-area: ec; }
+	section.halfquarterquarter figure.col3	{ grid-area: ed; }
+
+
+
+
+/*  section.quarterhalfquarter - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.quarterhalfquarter figure.col1	{ grid-area: dy; }
+	section.quarterhalfquarter figure.col2	{ grid-area: dz; }
+	section.quarterhalfquarter figure.col3	{ grid-area: ea; }
+
+
+
+
+/*  section.fullwidth - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.fullwidth div	{ grid-area: dx; }
+
+
+/*  section.onetwothirds - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.onetwothirds h4, section.onetwothirds h3       { grid-area: hd; }
+	section.onetwothirds figure.col1  { grid-area: ig; } 
+	section.onetwothirds figure.col2  { grid-area: ih; } 
+	section.onetwothirds div.rcol		{ grid-area: dw; }
+
+/*  section.twotwotwo - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.twotwotwo h4           { grid-area: hd; }
+	section.twotwotwo figure.col1  { grid-area: ia; } 
+	section.twotwotwo figure.col2  { grid-area: ib; } 
+	section.twotwotwo figure.col3  { grid-area: ic; }
+	section.twotwotwo figure.col4  { grid-area: id; } 
+	section.twotwotwo figure.col5  { grid-area: ie; } 
+	section.twotwotwo figure.col6  { grid-area: if; }  
+	section.twotwotwo div.lcol		{ grid-area: dv; } 
+	section.twotwotwo div.rcol		{ grid-area: dw; }
+
+
+/*  section.quotegrid - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.quotegrid div.lcol		{ grid-area: wy; } 
+	section.quotegrid div.rcol		{ grid-area: wz; }
+
+
+
+/*  section.bounceback - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.bounceback h4           { grid-area: hd; }
+	section.bounceback figure.col1  { grid-area: ka; } 
+	section.bounceback figure.col2  { grid-area: kb; } 
+	section.bounceback figure.col3  { grid-area: kc; } 
+	section.bounceback div.lcol		{ grid-area: dv; } 
+	section.bounceback div.rcol		{ grid-area: dw; }
+
+
+/*  section.devicetest - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.devicetest figure.col1  { grid-area: wy; } 
+	section.devicetest figure.col2  { grid-area: wz; } 
+	section.devicetest figure.col3  { grid-area: wa; } 
+	section.devicetest div.lcol		{ grid-area: da; } 
+	section.devicetest div.rcol		{ grid-area: db; }
+
+
+/*  section.omchallenge - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.omchallenge figure.col1		{ grid-area: wr; } /* figure */
+	section.omchallenge figure.col2		{ grid-area: ws; } /* figure */
+	section.omchallenge figure.col3		{ grid-area: wt; } /* figure */
+	section.omchallenge figure.col4		{ grid-area: wu; } /* figure */
+	section.omchallenge figure.col5		{ grid-area: wv; } /* figure */
+	section.omchallenge figure.col6	    { grid-area: wx; } /* figure */
+
+
+/*  section.four - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.four h3, section.four h4	{ grid-area: hw; }
+	section.four figure.col1		{ grid-area: wn; } /* figure */
+	section.four figure.col2		{ grid-area: wo; } /* figure */
+	section.four figure.col3		{ grid-area: wp; } /* figure */
+	section.four figure.col4		{ grid-area: wq; } /* figure */
+	section.four div.lcol		{ grid-area: da; } /* figure */
+	section.four div.rcol		{ grid-area: db; } /* figure */
+
+
+/*  section.altsix - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.altsix figure.col1		{ grid-area: wh; } /* figure */
+	section.altsix figure.col2		{ grid-area: wi; } /* figure */
+	section.altsix figure.col3		{ grid-area: wj; } /* figure */
+	section.altsix figure.col4		{ grid-area: wk; } /* figure */
+	section.altsix figure.col5		{ grid-area: wl; } /* figure */
+	section.altsix figure.col6		{ grid-area: wm; } /* figure */
+
+
+/*  section.reflection - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.reflection div.lcol1		{ grid-area: ra; } /* left paragraph section 1 */
+	section.reflection div.rcol1		{ grid-area: rb; } /* right paragraph section 1 */
+	section.reflection figure.col1		    { grid-area: wd; } /* figure */
+	section.reflection figure.null		{ grid-area: we; } /* figure */
+    section.reflection div.lcol2		{ grid-area: rc; } /* left paragraph section 2*/
+    section.reflection div.rcol2		{ grid-area: rd; } /* right paragraph section 2 */
+	section.reflection figure.col2		    { grid-area: wf; } /* figure */
+	section.reflection figure.null2		{ grid-area: wg; } /* figure */
+    section.reflection div.lcol3		{ grid-area: re; } /* left paragraph section 3 */
+    section.reflection div.rcol3		{ grid-area: rf; } /* right paragraph section 3 */
+
+
+
+/*  section.summary - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.summary div.lcol		{ grid-area: sa; } /* Top left paragraph section */
+	section.summary div.rcol		{ grid-area: sb; } /* Top right paragraph section */
+
+
+
+/*  section.audio - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.audio h4  { grid-area: hv; }
+	section.audio figure.col1  { grid-area: af; }
+	section.audio figure.col2  { grid-area: ag; }
+	section.audio figure.col3  { grid-area: ah; }
+	section.audio figure.col4  { grid-area: ai; }
+	section.audio figure.col5  { grid-area: aj; }
+	section.audio figure.col6  { grid-area: ak; }
+	section.audio div.lcol1  { grid-area: al; } /* Top left paragraph section */ 
+	section.audio div.rcol1  { grid-area: am; } /* Top right paragraph section */ 
+	section.audio div.lcol2  { grid-area: an; } /* Bottom left paragraph section */
+	section.audio div.rcol2  { grid-area: ao; } /* Bottom right paragraph section */
+	
+
+
+/*  section.nine - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.nine h3, section.nine h4 { grid-area: ht; }
+	section.nine figure.col1	{ grid-area: pz; }
+	section.nine figure.col2	{ grid-area: wa; }
+	section.nine div		{ grid-area: du; }
+	
+
+
+/*  section.eight - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.eight h3		{ grid-area: hp; }
+	section.eight div.col1		{ grid-area: dn; }
+	section.eight div.col2		{ grid-area: do; }
+	section.eight figure.col1	{ grid-area: pj; }
+	section.eight figure.col2	{ grid-area: pk; }
+	section.eight figure.col3	{ grid-area: pl; }
+	section.eight figure.col4	{ grid-area: pm; }
+	section.eight div.col3		{ grid-area: dp; }
+	section.eight div.col4		{ grid-area: dq; }
+    section.eight figure.col5	{ grid-area: pn; }
+	section.eight figure.col6	{ grid-area: po; }
+	section.eight figure.col7	{ grid-area: pp; }
+	section.eight figure.col8	{ grid-area: pq; }
+
+
+
+/*  section.about - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.about h3		{ grid-area: hp; }
+	section.about figure	{ grid-area: pj;  }
+	section.about div.col1		{ grid-area: dk; }
+    section.about div.col2		{ grid-area: dl; }
+
+
+
+/*  section.seven - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.seven h3 { grid-area: ho; } /* Heading in section seven */
+	section.seven div.lcol1 { grid-area: de; } /* Text area*/
+	section.seven div.rcol1 { grid-area: df; } /* Text area*/
+	section.seven figure.col1 { grid-area: pa; } /* First image column */
+	section.seven figure.col2 { grid-area: pb; } /* Second image column */
+	section.seven figure.col3 { grid-area: pd; } /* Third image column */
+	section.seven figure.col4 { grid-area: pe; } /* Fourth image column */
+	section.seven figure.col5 { grid-area: pf; } /* Fifth image column */
+	section.seven figure.col6 { grid-area: pg; } /* sixth image column */
+    section.seven div.lcol3 { grid-area: di; } /* Text area*/
+    section.seven div.rcol3 { grid-area: dj; } /* Text area*/
+	section.seven figure.col7 { grid-area: ph; } /* seventh image column */
+	section.seven figure.col8 { grid-area: pi; } /* eighth image column */
+
+
+
+/*  section.altfive - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.altfive h3 { grid-area: hm; } /* Heading in section altfive */
+	section.altfive figure.col1 { grid-area: iu; } /* First image column */
+	section.altfive figure.col2 { grid-area: iv; } /* Second image column */
+	section.altfive figure.col3 { grid-area: ix; } /* Third image column */
+	section.altfive div.lcol { grid-area: dc; } /* Text area */
+	section.altfive div.rcol { grid-area: dd; } /* Text area*/
+	section.altfive figure.col4 { grid-area: iy; } /* Fourth image column */
+	section.altfive figure.col5 { grid-area: iz; } /* Fifth image column */
+
+
+
+/*  section.altfour - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.altfour h4, section.altfour h3 { grid-area: hl; } /* Heading in section altfour */
+	section.altfour figure.col1 { grid-area: iq; } /* First image column */
+	section.altfour figure.col2 { grid-area: ir; } /* Second image column */
+	section.altfour figure.col3 { grid-area: is; } /* Third image column */
+	section.altfour figure.col4 { grid-area: it; } /* Fourth image column */
+	section.altfour div.lcol { grid-area: da; } /* Text area in section altfour */
+	section.altfour div.rcol { grid-area: db; } /* Text area in section altfour */
+
+
+
+/*  section.six - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.six h3, section.six h4 { grid-area: hj; } /* Heading in section six */
+	section.six figure.col1 { grid-area: ie; } /* First image column */
+	section.six figure.col2 { grid-area: if; } /* Second image column */
+	section.six figure.col3 { grid-area: ig; } /* Third image column */
+	section.six figure.col4 { grid-area: ih; } /* Fourth image column */
+	section.six figure.col5 { grid-area: ii; } /* Fifth image column */
+	section.six figure.col6 { grid-area: ij; } /* Sixth image column */
+	section.six div.lcol { grid-area: tj; } /* Text area in section six */
+	section.six div.rcol { grid-area: tk; } /* Text area in section six */
+
+
+
+/*  section.vertleft - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.vertleft h3, section.vertleft h4 { grid-area: hh; }
+	section.vertleft figure.col1	{ grid-area: ic  }
+	section.vertleft figure.col2	{ grid-area: id  }
+	section.vertleft div		{ grid-area: ti; }
+
+
+
+/*  section.five - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.five h3, section.five h4 { grid-area: hf; } /* Heading in section five */
+	section.five figure.col1 { grid-area: fy; } /* First image column */
+	section.five figure.col2 { grid-area: ib; } /* Second image column */
+	section.five figure.col3 { grid-area: fx; } /* Third image column */
+	section.five div.lcol { grid-area: tg; } /* Text area in section five */
+	section.five div.rcol { grid-area: th; } /* Text area in section five */
+
+
+
+/*  section.threeone - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.threeone h3, section.threeone h4  { grid-area: hc; } /* Heading in section threeone */
+	section.threeone figure.col1 { grid-area: fu; } /* First image column */
+	section.threeone figure.col2 { grid-area: fv; } /* Second image column */
+	section.threeone figure.col3 { grid-area: fw; } /* Third image column */
+	section.threeone figure.col4 { grid-area: fx; } /* single image column */
+	section.threeone div.lcol { grid-area: td; } /* Left Text area in section threeone */
+	section.threeone div.rcol { grid-area: te; } /* Right Text area in section threeone */
+
+
+
+/*  section.twotwo - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.twotwo h3, section.twotwo h4 { grid-area: hb; } /* Heading in section twotwo */
+	section.twotwo figure.col1 { grid-area: fo; } /* First image column */
+	section.twotwo figure.col2 { grid-area: fp; } /* Second image column */
+	section.twotwo figure.col3 { grid-area: fq; } /* Third image column */
+	section.twotwo figure.col4 { grid-area: fs; } /* Fourth image column */
+	section.twotwo figure.col5 { grid-area: ft; } /* Fifth image column */
+	section.twotwo div.lcol { grid-area: ta; } /* Text area in section twotwo */
+	section.twotwo div.rcol { grid-area: tc; } /* Text area in section twotwo */
+
+
+
+/*  section.original - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.original h3		{ grid-area: hd; }
+	section.original figure	{ grid-area: fg  }
+	section.original div	{ grid-area: dv; }
+
+
+
+/*  section.alt - default section template areas 
+--------------------------------------------------------------------------------------- */
+	section.alt h3		{ grid-area: hg; }
+	section.alt figure	{ grid-area: fl  }
+	section.alt div		{ grid-area: tt; }
+
+
+
+/*  section.alttwo - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.alttwo h3, section.alttwo h4 { grid-area: hr; } /* Heading in section alt two */
+	section.alttwo figure.col1 { grid-area: fn; } /* First full image */
+	section.alttwo figure.col2 { grid-area: fm; } /* Second image column */
+	section.alttwo div { grid-area: ts; } /* Text area in section four */
+
+
+
+/*  section.one - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.one h3, section.one h4 { grid-area: hn; } /* Heading in section one */
+	section.one figure  { grid-area: fk; } /* Figure in section one */
+	section.one div.lcol { grid-area: tu; } /* Left Text area in section one */
+	section.one div.rcol { grid-area: tf; } /* Right Text area in section one */
+
+
+
+/*  section.intro - default section template areas
+--------------------------------------------------------------------------------------- */
+	section.intro h1 { grid-area: hr; } /* Heading in section intro */
+	section.intro div.lcol { grid-area: tw; } /* Question in section intro */
+	section.intro div.rcol { grid-area: qu; } /* Text area in section intro */
+	section.intro div.mcol { grid-area: xx; } /* Middle blank div in section intro */
+
+
+
+/*  footer grid  
+--------------------------------------------------------------------------------------- */	
+	footer { 	
+		display: grid; 
+		grid-template-columns: 1fr auto;
+		grid-template-rows: repeat(minmax(3rem, auto));
+		grid-gap: 0;
+		border-top: 0 #eee none;
+		margin-top: 4rem;
+		padding-top: 0rem;
+		padding-left: 1rem;
+		/* background: #fbdcc7; color:#fff; */
+	}
+
+	footer h3			{ margin: 0; }
+	footer ul 			{ padding-right: 1rem; }
+	footer li 			{ display: inline; margin-left: .5rem; }
+	footer p            { padding-bottom: 1em;}
+	footer li a 		{ background: #fff; padding: .25em .25em; border-radius: .25em; font-weight:bold; }
+	footer li a:hover	{ background: #000;}
+
+	
+} /* end 550px media query */
+
+
+
+/*  Media query to add section padding only where needed
+-----------------------------------------------------*/
+@media only screen and (min-width:1167px) {section { padding:0}}  
+
+
+
+/* IMPORTANT: media query - for BIG screens (+1920px) set min-width to 2000px, adjust font size to taste
+delete 'off.' from selector
+--------------------------------------------------------------------------------------- */
+@media (min-width: 2000px) { off.html { font-size: 1.5em; } }
+
+
+
+/* IMPORTANT: media query to scale logo (at 550px or less)
+-----------------------------------------*/
+@media (max-width: 550px) { 	img.logo, img.logo-small { height: 3.75em; } 
+                           	nav { margin-top: -1.3em; margin-bottom: -0.5em;}
+                            	nav img { margin-top: 0.4em; }
+			    	nav ul li { margin-right: 0.8rem; font-size: 1em; } 
+			    	section.intro h1 {padding-bottom: 0.3em;}
+	                    	section.intro h3 { font-size: 1.1em }
+			    	h2.index {font-size: 1.6em; margin-top: 0.6em; }
+			    	p.index { font-size: 1em; padding: 0 2em 0 2em; margin-top: -1em; }
+			    	footer p { padding-left: 1em; font-size: 0.8em;}
+				section.about figure { margin: 0em 4em 1em 1em; }
+				section.about h1 { padding-bottom: 0.3em; }
+				section.about div { margin: 0 1em 0 -2em }
+                            	section.five figure.col1 {padding-bottom: 1.75em}
+				nav.topoverview {margin-top:20px}
+			 }
+
+
+/* IMPORTANT: media query to scale nav and logo on narrow phone screens (at 375px or less)
+-----------------------------------------*/
+@media (max-width: 375px) { img.logo { height: 3.1em; } 
+                            nav { margin-top: -2em; margin-bottom: -0.6em; }
+                            nav img { margin-top: 0.7em; }
+							nav ul li { margin-right: 0.2rem; font-size: 0.8em;} 
+							nav li { padding-bottom: 2em; }
+							
+							}
+/* Styling for social media icons
+----------------------------------*/
+
+   img.social { filter: invert(89%) sepia(21%) saturate(1975%) hue-rotate(299deg) brightness(92%) contrast(109%); }
+   img.social { opacity: 1; filter: invert(89%) sepia(21%) saturate(1975%) hue-rotate(299deg) brightness(92%) contrast(109%); }
+   a img.social:hover { opacity: 0.2; }
+   div.social { text-align: center; }
+   div ul.social { list-style-type:none; padding-left:0; }
+   div ul.social, div li.social	{ display: inline-block; margin-right: 1.2rem;}
+

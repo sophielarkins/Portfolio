@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Sophie Larkins | Graphic Designer & Illustrator</title>
+	<meta name="description" content="Concept-led thoughtful design. Junior graphic designer based in Bournemouth, UK."/>
+	<link rel="icon" href="media/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" href="media/favicon/favicon-192x192.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="media/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
+    <link href="style-new.css" rel="stylesheet">	
+	<style>
+	
+	section.projects { padding: 0; }
+	
+	section.projects {
+		grid-template-areas: none;  /* switches off other css applied to section selector */
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+		grid-gap: 0.8em;
+		grid-row-gap: 0.8em;
+	}
+	/* Fixes over-wide images on screens below 416px */
+	@media (max-width: 415px) { 
+	section.projects {
+    		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    		}
+	}
+	.projects figure { display: grid; grid-area: auto; background: #f9f0ef; margin:0; }
+	
+	/* grid applied to anchor */
+	.projects figure a {
+		display:grid;
+		grid-template-rows: 45% auto;
+		grid-template-areas:
+		"im"
+		"im"
+    }
+    
+    .projects figure * { grid-column: 1; }
+	.projects figure img { grid-area: im; }
+	
+	.projects figure img { filter: opacity(1); }
+	.projects figure:hover img { filter: opacity(0.2); transition: 0.3s;}
+	
+	.projects figure figcaption {
+		grid-row: 2;
+		padding-left: 0rem;
+		z-index: 100;
+	}
+	
+	
+	
+	<!-- rollover heading styling -->
+	
+	.projects figure h3 { margin-bottom:0; color:#000; font-size:2em; }
+	
+	.projects figure a { text-decoration: none; }
+	
+	figure.roll figcaption h2, figure.roll figcaption p {
+    	opacity: 0;
+		}
+		
+	figure.roll figcaption p { margin-top: -1.7em; font-size: 1.2em; }
+		
+	.container figure figcaption h2 {
+    	line-height: 1.15em;
+    	font-size: 2em;
+    	margin-top: -0.42em;
+	}
+
+	h2.hover {
+    	text-align: center;
+		}
+	
+	figure.roll:hover h2, figure.roll:hover p {
+    	opacity: 1;
+    	background: transparent;
+    	grid-area: all !important;
+    	justify-self: center;
+    	align-self: center;
+    	color: #312f41;
+    	z-index: 1;
+    	padding: 0 1em 1em 1em;
+		}
+		
+		
+		
+		<!-- rollover figure change -->
+
+  figure.change {
+        width:2em;
+        position: relative;
+        display: inline-block;
+    }
+    .change .img-top {
+        display: none;
+        z-index: 99;
+    }
+    .change:hover .img-top {
+        display: inline;
+        opacity: 1
+    }
+    
+    .change:hover .img-bottom { opacity: 0}
+		
+	<!-- Acknowledgement: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -->
+		
+	</style>
+	
+	<!-- Setting viewport so mobiles over 550px wide don't display desktop site. Acknowledgement: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.sophielarkins.com/media/home/portfolio-link-image.jpg" />
+<meta property="og:image:width" content="180" />
+<meta property="og:image:height" content="110" />
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<nav>
+<a href="index.html"><img class="logo" src="media/home/logo-updated.svg" alt="Sophie Larkins logo" /><img class="logo-small" src="media/home/logo-icon.svg" alt="Sophie Larkins logo (small)" /></a>
+<ul class="align">
+	<li><a href="index.html"><span>Work</span></a></li>
+		<li><a href="play.html">Play</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+
+<center><h2 class="index" style= "padding-top: 0.2em;">Hey! I’m Sophie.</h2></br></center>
+<center><p class="index darkgrey" style= "padding-bottom: 2.5em;">I'm a designer and 70s music lover creating concept-led thoughtful design.</p></center>
+
+<section class="projects">
+
+
+
+	
+		<figure class="roll change"><a href="soak-up.html">
+	    <img class="img-top" alt="creative futures logo and texture" src="media/home/soakup-billboard.jpg">
+		<img class="img-bottom" alt="creative futures cube with texture" src="media/home/soakup-hero-alt2.png">
+		<figcaption>
+	<center><h2>Soak Up</h2></center>
+	<center><p>Brand Identity</p></center>
+		</figcaption></a>
+	</figure>
+	
+
+			<figure class="roll change"><a href="keep-greenham-green.html">
+	    <img class="img-top" alt="creative futures logo and texture" src="media/home/kgg-megaphone-2.jpg">
+		<img class="img-bottom" alt="creative futures cube with texture" src="media/home/kgg-logo.png">
+		<figcaption>
+	<center><h2>Keep Greenham Green</h2></center>
+	<center><p>Campaign and Storybook</p></center>
+		</figcaption></a>
+	</figure>
+
+
+
+	<figure class="roll change"><a href="flourish.html">
+		<img class="img-top" alt="flourishing landscape with logo" src="media/home/flourish-hero-box.jpg">
+		<img class="img-bottom" alt="flourishing landscape" src="media/home/flourish-hero-48qual.jpg">
+		<figcaption>
+			<center><h2>Flourish</h2></center>
+			<center><p>User-Centered Design, Print, Illustration</p></center>
+		</figcaption></a>
+	</figure>
+
+    
+    
+
+<figure class="roll change"><a href="vivaceous.html">
+	    <img class="img-top" alt="vivaceous logo and hand with hand cream" src="media/home/vivaceous-hero-packaging.jpg">
+		<img class="img-bottom" alt="vivaceous logo" src="media/home/vivaceous-hero.png">
+		<figcaption>
+	<center><h2>Vivaceous</h2></center>
+	<center><p>Brand Identity & Packaging</p></center>
+		</figcaption></a>
+	</figure>
+	
+    
+	
+	<figure class="roll change"><a href="always.html">
+	    <img class="img-bottom" alt="always spectrum and underwear" src="media/home/always-hero-alt.jpg">
+		<img class="img-top" alt="always spectrum ring icon" src="media/home/always-hero-packaging.jpg">
+		<figcaption>
+	<center><h2>Always</h2></center>
+	<center><p>Rebrand & Packaging</p></center>
+		</figcaption></a>
+	</figure>
+
+
+	<figure class="roll change"><a href="our-museum.html">
+		<img class="img-bottom" alt="our museum logo" src="media/home/our-museum-hero-700.svg">
+		<img class="img-top" alt="our museum logo on clay image" src="media/home/om-clay-hero-w.jpg">
+		<figcaption>
+		<center><h2>Our Museum</h2></center>
+		<center><p>Brand Identity<p></center>
+		</figcaption></a>
+	</figure>
+
+
+
+
+
+<figure class="roll change"><a href="creative-futures.html">
+	    <img class="img-top" alt="creative futures logo and texture" src="media/home/creative-futures-hero-alt-8col-32dither.png">
+		<img class="img-bottom" alt="creative futures cube with texture" src="media/home/creative-futures-qual21-blur0_18-700.jpg">
+		<figcaption>
+	<center><h2>Creative Futures</h2></center>
+	<center><p>Campaign Motion Graphic</p></center>
+		</figcaption></a>
+	</figure>
+	
+	
+	<figure class="roll change"><a href="symbiosis.html">
+		<img class="img-top" alt="earth" src="media/home/symbiosis-hero-packaging-2.jpg">
+		<img class="img-bottom" alt="symbiosis logo" src="media/home/new-hero-symbiosis.png">
+		<figcaption>
+	<center><h2>Symbiosis</h2></center>
+	<center><p>Digital & Physical Experience Design</p></center>
+		</figcaption></a>
+	</figure>
+	
+	
+
+</section> <!-- end .projects section -->
+
+<!--- SOCIAL MEDIA ICONS -->
+ <div class="social" style="padding-top:60px">
+   <ul class="social">
+   <li class="social"> 
+		<a target="_blank" href="https://www.instagram.com/sophielarkins/?hl=en" >  <img class="social" alt="Instagram" src="media/contact/iconmonstr-instagram-11.svg"></a>
+		</li>
+   <li class="social"> 
+		<a target="_blank" href="https://www.linkedin.com/in/sophie-larkins-6341b61a6/" > <img class="social" alt="LinkedIn" src="media/contact/iconmonstr-linkedin-1.svg"></a>
+		</li>
+   <li class="social">
+		<a target="_blank" href="https://dribbble.com/SophieLarkins" >  <img class="social" alt="Dribbble" src="media/contact/iconmonstr-dribbble-1.svg"></a>
+   		</li>
+   <li class="social" style="margin-right: -1.2rem;"> 
+		<a target="_blank" href="https://www.behance.net/sophielarkins" > <img class="social" alt="Behance" src="media/contact/iconmonstr-behance-1.svg"></a>
+	</li>
+	</ul>
+ </div>
+
+<footer> 
+<center><p class="lightgrey">&#169; Sophie Larkins 2023</p></center>
+</footer>
+
+</div> <!-- end of container -->
+
+
+</body>
+</html>
